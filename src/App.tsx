@@ -1,33 +1,107 @@
-:root { --bg:#ffffff; --ink:#0f172a; --muted:#475569; --ring:#6366f1; --card:#f8fafc; }
-*{ box-sizing:border-box }
-body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color:var(--ink); background:var(--bg); }
-a{ color:inherit; text-decoration:none }
-.container{ max-width:1100px; margin:0 auto; padding:24px }
-.nav{ display:flex; align-items:center; justify-content:space-between; padding:8px 0; position:sticky; top:0; background:var(--bg) }
-.nav .brand{ font-weight:700; letter-spacing:0.3px }
-.nav nav a{ margin-left:16px; color:var(--muted) }
-.nav nav a:hover{ color:var(--ink) }
+// src/App.tsx
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-.logo{ height:60px; will-change: filter; transition: filter .2s }
-.logo.react{ margin-left:8px }
-.hero{ text-align:center; padding:64px 0 24px }
-.hero h1{ font-size:48px; margin:16px 0 8px }
-.subtitle{ color:var(--muted); margin:0 auto 16px; max-width:640px }
-.cta{ display:flex; gap:12px; justify-content:center; margin:16px 0 0 }
-.btn{ padding:10px 16px; border:1px solid #e2e8f0; border-radius:10px; }
-.btn:hover{ border-color: var(--ring) }
-.btn.primary{ background:var(--ring); color:white; border-color:var(--ring) }
-.btn.primary:hover{ filter:brightness(0.95) }
+export default function App() {
+  return (
+    <main className="container">
+      <header className="nav">
+        <div className="brand">Divine Child</div>
+        <nav>
+          <a href="#mission">Mission</a>
+          <a href="#offerings">Offerings</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-.section{ padding:48px 0; border-top:1px solid #eef2f7 }
-.section h2{ font-size:28px; margin:0 0 12px }
-.section p{ color:var(--muted); max-width:780px }
-.cards{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:16px }
-.card{ background:var(--card); padding:16px; border-radius:14px; border:1px solid #e2e8f0 }
+      <section className="hero">
+        <img src={viteLogo} className="logo" alt="Vite logo" />
+        <img src={reactLogo} className="logo react" alt="React logo" />
+        <h1>Remember Your Divinity</h1>
+        <p className="subtitle">
+          Gentle coaching, spiritual guidance, and a movement for peace and love.
+        </p>
+        <div className="cta">
+          <a className="btn primary" href="#contact">Book a Session</a>
+          <a className="btn" href="#newsletter">Join the Newsletter</a>
+        </div>
+      </section>
 
-form{ display:grid; gap:10px; max-width:520px }
-input, textarea{ padding:10px 12px; border:1px solid #e2e8f0; border-radius:10px; font:inherit }
-input:focus, textarea:focus{ outline:none; border-color: var(--ring); box-shadow:0 0 0 3px rgba(99,102,241,.15) }
-.hidden{ display:none }
+      <section id="mission" className="section">
+        <h2>Our Mission</h2>
+        <p>
+          Divine Child exists to awaken the light within every soul. We serve with kindness,
+          clarity, and simple tools that restore peace and purpose.
+        </p>
+      </section>
 
-.footer{ text-align:center; padding:36px 0; color:var(--muted) }
+      <section id="offerings" className="section cards">
+        <article className="card">
+          <h3>1:1 Coaching</h3>
+          <p>Compassionate guidance to align your life with love, courage, and wisdom.</p>
+        </article>
+        <article className="card">
+          <h3>Radio & Teachings</h3>
+          <p>Weekly reflections and meditations to support your spiritual growth.</p>
+        </article>
+        <article className="card">
+          <h3>Divine Child Movement</h3>
+          <p>Nonprofit initiatives that uplift communities through service and presence.</p>
+        </article>
+      </section>
+
+      <section id="about" className="section">
+        <h2>About Professor Luis</h2>
+        <p>
+          Radio host, PhD candidate, coach, and gentle teacher dedicated to global healing.
+          This work is a homecoming—to innocence, power, and joy.
+        </p>
+      </section>
+
+      <section id="newsletter" className="section">
+        <h2>Join the Newsletter</h2>
+        {/* Netlify Forms (TS-safe via data-* attrs) */}
+        <form
+          name="newsletter"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="newsletter" />
+          <p className="hidden">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+          <input type="email" name="email" placeholder="Your email" required />
+          <button className="btn primary" type="submit">Subscribe</button>
+        </form>
+        <small>You’ll receive gentle updates and meditations. No spam, ever.</small>
+      </section>
+
+      <section id="contact" className="section">
+        <h2>Contact</h2>
+        {/* Netlify Forms (TS-safe via data-* attrs) */}
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p className="hidden">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="How can I serve?" rows={5} />
+          <button className="btn primary" type="submit">Send</button>
+        </form>
+      </section>
+
+      <footer className="footer">
+        <span>© {new Date().getFullYear()} Divine Child • All love, all ways</span>
+      </footer>
+    </main>
+  )
+}
