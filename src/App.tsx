@@ -1,4 +1,3 @@
-/* src/App.css */
 :root { --bg:#ffffff; --ink:#0f172a; --muted:#475569; --ring:#6366f1; --card:#f8fafc; }
 *{ box-sizing:border-box }
 body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color:var(--ink); background:var(--bg); }
