@@ -62,7 +62,7 @@ export default function App() {
 
       <section id="newsletter" className="section">
         <h2>Join the Newsletter</h2>
-        {/* Netlify Forms (TS-safe via data-* attrs) */}
+        {/* Netlify Forms (TS-safe) */}
         <form
           name="newsletter"
           method="POST"
@@ -81,7 +81,7 @@ export default function App() {
 
       <section id="contact" className="section">
         <h2>Contact</h2>
-        {/* Netlify Forms (TS-safe via data-* attrs) */}
+        {/* Netlify Forms (TS-safe) */}
         <form
           name="contact"
           method="POST"
