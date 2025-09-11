@@ -1,0 +1,9 @@
+{
+  "defaultLocale": "en",
+  "ui": { "nav": { "donate": "Donate", "programs": "Programs" } },
+  "home": {
+    "heroTitle_en": "I Am. I Can. I Will.",
+    "heroSubtitle_en": "Awakening children to their Divine power.",
+    "cta_en": "Join the Movement"
+  }
+}
