@@ -25,16 +25,19 @@
   <main class="wrap">
     <h2>Say hello</h2>
     <p>Send a message and I’ll reply soon.</p>
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
-      <p style="display:none">
-        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-      </p>
-      <input name="name" placeholder="Your name" required />
-      <input name="email" type="email" placeholder="Your email" required />
-      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <form action="https://formsubmit.co/luis.e.olivares@hotmail.com method="POST">
+  <input type="text" name="name" placeholder="Your name" required />
+  <input type="email" name="email" placeholder="Your email" required />
+  <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New message from I Am Divine site">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://luiseolivares-prog.github.io/divine-child/">
+
+  <button type="submit">Send</button>
+</form>
+
   </main>
 
   <footer>© <span id="y"></span> Luis Olivares — I Am Divine</footer>
