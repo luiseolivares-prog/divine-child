@@ -1,0 +1,12 @@
+netlify.toml
+# START netlify.toml
+[build]
+publish = "."
+
+
+# Optional single-page-app style fallback (keeps things simple)
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+# END netlify.toml
