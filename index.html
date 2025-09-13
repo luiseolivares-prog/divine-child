@@ -1,4 +1,44 @@
-Divine_Agent_Content_Log.csv 
-Date,Action,Platform,Status,Link,Notes
-2025-09-13,Queued Post,Instagram,Queued,,Week 1
-2025-09-13,Queued Post,TikTok,Queued,,Week 1
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>I Am Divine — Luis Olivares</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin:0; padding:0; }
+    header { padding: 48px 20px; text-align:center; background: #f5f7fb; }
+    h1 { margin: 0 0 8px; }
+    p { margin: 6px 0; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 24px; }
+    form { display: grid; gap: 12px; margin-top: 16px; }
+    input, textarea, button { padding: 12px; font-size: 16px; }
+    button { cursor: pointer; border: 0; background: black; color: white; }
+    footer { text-align:center; padding: 24px; font-size: 14px; color:#555; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>I Am Divine</h1>
+    <p>Breath. Presence. Sovereignty. — with Luis Olivares</p>
+  </header>
+
+  <main class="wrap">
+    <h2>Say hello</h2>
+    <p>Send a message and I’ll reply soon.</p>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display:none">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+      <input name="name" placeholder="Your name" required />
+      <input name="email" type="email" placeholder="Your email" required />
+      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>© <span id="y"></span> Luis Olivares — I Am Divine</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
+Week 1
